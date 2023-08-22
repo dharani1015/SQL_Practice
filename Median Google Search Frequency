@@ -27,6 +27,7 @@ FROM search_frequency
 
 --GENERATE_SERIES: Generates a series of numbers
 --In below statement it would generate for each row like (1,2), (1,2), (1,2,3), (1)
+-- Gives a series of values like [1,1,2,2,3,3,3,4]
 
 GROUP BY searches, GENERATE_SERIES(1,num_users)
 )
